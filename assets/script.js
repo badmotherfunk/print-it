@@ -12,38 +12,25 @@ const slides = [
 		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
 	},
 	{
-		"image":"slide4.jpg",
+		"image":"slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
 
 const suivant = document.querySelector('.arrow_right');
 const precedent = document.querySelector('.arrow_left');
-const cercles = document.querySelectorAll('.dot')
+const cercles = document.querySelectorAll('.dot');
 let slider_img = document.querySelector('.banner-img');
 let banner_txt = document.querySelector('#banner p');
 
-console.log(banner_txt);
-
-
-
-
 counter = 0;
-
-console.log(counter)
-
-console.log(slides[0]["image"]);
-
-
 
 
 suivant.addEventListener('click', slideSuivante);
 
-
 function slideSuivante(){
 	console.log(slideSuivante);
 
-	// SlideImage
 	cercles[counter].classList.remove('dot_selected');
 
 	counter++;
@@ -57,22 +44,12 @@ function slideSuivante(){
 }
 
 
-
-
-
-// slides.forEach((el, index, array) => console.log(el, index, array))
-// console.log(slides.findIndex(el => el === "slide2.jpg"));
-console.log('slides');
-
-
-
 slider_img.src = `./assets/images/slideshow/${slides[counter]["image"]}`;
+
 precedent.addEventListener('click', slidePrecedente);
 
 function slidePrecedente(){
 	console.log(slidePrecedente);
-
-	// SlideImage
 
 	cercles[counter].classList.remove('dot_selected');
 	
